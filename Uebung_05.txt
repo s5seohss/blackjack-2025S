@@ -1,0 +1,13 @@
+Aufgabe 1
+
+
+
+Aufgabe 2
+
+UDP garantiert nicht, dass ein gesendetes Paket beim Empfänger ankommt. Falls ein Paket nicht ankommt, muss ein neues gesendet werden. Um feststellen zu können, ob ein Paket angekommen ist, kann man von Empfänger eine Empfangsbestätigung schicken lassen. Falls keine Bestätigung kommt, kann man nach einer kurzen Wartezeit das Paket nochmal schicken.
+
+Weiterhin kann es ein Problem sein, dass Pakete nicht in der richtigen Reihenfolge ankommen. Man kann dem mit fortlaufenden Sequenznummern entgegenwirken, die man den Paketen gibt. Dadurch kann man auch Duplikaten vorbeugen, indem der Empfänger die letzten empfangenen Sequenznummern speichert.
+
+Dann ist natürlich das einheitliche Nachrichtenprotokoll wichtig. Es muss klar definiert werden, ob Nachrichten die Form eines simplen Strings oder einer beispielsweise eine JSON-Datei haben. Sonst kann der Empfänger die nachricht nicht interpretieren und das Programm nicht die gewünschten Aktionen durchführen.
+
+
